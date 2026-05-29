@@ -1,4 +1,4 @@
-# ComputerVision
+# ComputerVision - Real World Industrial Problem : Detecting Structural Cracks in Building Walls and Concrete Surfaces
 
 ## Overview
 This module implements real-time inference on video using your trained ONNX model with live metrics overlay including FPS, latency, and detections.
