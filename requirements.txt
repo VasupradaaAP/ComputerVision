@@ -1,0 +1,17 @@
+# Phase 3: Inference Pipeline Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core ML framework
+ultralytics==8.1.0
+
+# ONNX runtime for model inference
+onnxruntime==1.17.1
+
+# OpenCV for video processing
+opencv-python==4.8.1.78
+
+# Numerical computing
+numpy==1.24.3
+
+# Optional: For system monitoring (commented out)
+# psutil==5.9.6
