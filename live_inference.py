@@ -1,9 +1,3 @@
-"""
-Phase 3: Real-time Inference Script with Metrics Overlay
-Runs ONNX model inference on video with live FPS and latency metrics
-Model Class: BuildingCracks (single class)
-"""
-
 import cv2
 import numpy as np
 import time
