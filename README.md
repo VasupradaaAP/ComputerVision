@@ -17,7 +17,6 @@ This module implements real-time inference on video using your trained ONNX mode
 .\.venv\Scripts\activate
 
 # Install dependencies
-cd phase3
 pip install -r requirements.txt
 ```
 
@@ -25,17 +24,17 @@ pip install -r requirements.txt
 
 ```
 Industrial defect/
-├── runs/detect/train/weights/best.onnx    ← Your ONNX model
+├── trained_file.onnx            ← Your ONNX model
 └── test_data/
-    └── sample_video.mp4                   ← Your test video
+    └── sample_video.mp4         ← Your test video
 ```
 
 ### 3. Update Configuration
 Edit `config.py` and set correct paths:
 ```python
-MODEL_PATH = r"D:\Industrial defect\runs\detect\train\weights\best.onnx"
+MODEL_PATH = r"D:\Industrial defect\trained_file.onnx"
 VIDEO_PATH = r"D:\Industrial defect\test_data\sample_video.mp4"
-OUTPUT_PATH = r"D:\Industrial defect\phase3\output\inference_output.mp4"
+OUTPUT_PATH = r"D:\Industrial defect\output\inference_output.mp4"
 ```
 
 
@@ -121,6 +120,7 @@ phase3/
 ├── config.py                  # Configuration (paths & parameters)
 ├── requirements.txt           # Python dependencies
 ├── README.md                  # This file
+├── trained_file.onnx          # ONNX file
 └── output/                    # Output videos saved here
 ```
 
@@ -128,7 +128,7 @@ phase3/
 
 ### Model Not Found
 ```
-Error: Model not found: D:\Industrial defect\runs\detect\train\weights\best.onnx
+Error: Model not found: D:\Industrial defect\trained_file.onnx
 ```
 **Solution**: Verify ONNX file path in `config.py` matches your actual file location.
 
@@ -172,9 +172,9 @@ Error: Video not found: D:\Industrial defect\test_data\sample_video.mp4
 - **Input Size**: Configurable (default 640x640)
 - **Output**: Bounding boxes with confidence scores
 
-## Support Files Needed From You
-1. **best.onnx** - Your trained model (required)
-2. **sample_video.mp4** - Your test video (required)
+## Support Files Needed
+1. **trained_file.onnx** - trained model (required)
+2. **sample_video.mp4** - test video (required)
 
 ## Example Output Statistics
 ```
@@ -186,7 +186,7 @@ Average Live FPS: 12.5
 Average Preprocess: 2.34ms
 Average Inference: 78.45ms
 Average Postprocess: 1.21ms
-Output saved to: D:\Industrial defect\phase3\output\inference_output.mp4
+Output saved to: D:\Industrial defect\output\inference_output.mp4
 ==================================================
 ```
 
