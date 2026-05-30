@@ -53,6 +53,9 @@ dataset = version.download("yolov8")
 
 !yolo task=detect mode=predict model=runs/detect/train/weights/best.pt source="/imgs1.jpg"
 
+
+# CONVERSION SCRIPTS
+
 !pip install onnx onnxruntime onnxconverter-common -q
 
 from ultralytics import YOLO
