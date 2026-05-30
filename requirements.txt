@@ -1,4 +1,4 @@
-# Phase 3: Inference Pipeline Dependencies
+# Inference Pipeline Dependencies
 # Install with: pip install -r requirements.txt
 
 # Core ML framework
